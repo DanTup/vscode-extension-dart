@@ -2,30 +2,23 @@ import 'dart:js_interop';
 import 'dart:js_interop_unsafe';
 
 void main() {
-  print('In Dart main!');
-  globalContext.setProperty(
-    'vscode_dart'.toJS,
-    // Why doesn't any of this work, but putting something
-    // like '1'.toJs does?
-    // createJSInteropWrapper(Extension()),
-    // Extension().activate,
-    '1'.toJS,
-  );
+  activate = _activateImpl.toJS;
+  deactivate = _deactivateImpl.toJS;
 }
 
-void activate() {
-  print('Activated!');
+@JS('vs_code_dart_activate')
+external set activate(JSAny x);
+
+@JS('vs_code_dart_deactivate')
+external set deactivate(JSAny x);
+
+void _activateImpl(JSObject context) {
+  print('HELLO FROM DART (at ${context.getProperty('extensionPath'.toJS)})');
+
+  // TODO: Implement registering the helloWorld command
+  //  and and remove the "*" from activation events.
 }
 
-@JSExport()
-class Extension {
-  @JSExport()
-  void activate() {
-    print('Activated');
-  }
-
-  @JSExport()
-  void deactivate() {
-    print('Deactivated');
-  }
+void _deactivateImpl() {
+  print('GOODBYE FROM DART');
 }

@@ -1,0 +1,8 @@
+name: vscode_extension_dart
+version: 0.0.1
+
+environment:
+  sdk: '>=3.5.0-0'
+
+dependencies:
+  path:

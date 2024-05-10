@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build_dart",
+			"type": "shell",
+			"command": "C:\\Dev\\Tools\\Dart\\Latest (Bleeding Edge)\\bin\\dart",
+			"args": [
+				"tool/build.dart",
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	],
+}

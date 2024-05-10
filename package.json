@@ -1,0 +1,21 @@
+{
+  "name": "vscode-extension-dart",
+  "displayName": "vscode-extension-dart",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": ["*"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "vscode-extension-dart.helloWorld",
+      "title": "Hello World"
+    }]
+  },
+  "scripts": {}
+}

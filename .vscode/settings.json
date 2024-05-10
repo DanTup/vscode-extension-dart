@@ -1,0 +1,12 @@
+{
+	"files.exclude": {
+		"**/node_modules/**": true,
+	},
+	"search.exclude": {
+		"**/node_modules/**": true,
+	},
+	"editor.formatOnSave": false,
+	"editor.formatOnPaste": false,
+	"editor.formatOnType": false,
+	"dart.sdkPath": "C:\\Dev\\Tools\\Dart\\Latest (Bleeding Edge)"
+}
